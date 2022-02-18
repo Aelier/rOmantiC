@@ -1,15 +1,36 @@
 <html>
-<body style="background-color:F0FFFF;"></body>
-<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
-  <frameset rows="47,*" framespacing="0" border="0" frameborder="0">
-      <frame name="header" scrolling="no" noresize target="main" src="top.htm">
-      <frame name="main" src="main.htm" scrolling="auto" target="_self">
-      <noframes>
-      </noframes>
-      </frameset>
-<head>
-    <mate charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" >
+<body style="background-color:F0FFFF">
+    <body oncontextmenu=self.event.returnValue=false><!--←禁止右键-->
+    <script>
+        //按键触发
+    document.onkeydown = function(){
+        //禁止ctrl+u↓
+        if (event.ctrlKey && window.event.keyCode==85){
+        return false;
+        }
+        //禁止 F12↓
+        if (window.event && window.event.keyCode == 123) {
+        event.keyCode = 0;
+        event.returnValue = false;
+        }
+        //禁止ctrl+s↓
+        if (event.ctrlKey && window.event.keyCode==83){
+        return false;
+        }
+        //禁止 F5 ↓
+        if (window.event && window.event.keyCode == 116) {
+        event.keyCode = 0;
+        event.returnValue = false;}
+        };
+        //网站禁止选择文字↓
+        document.body.onselectstart = function() {
+        self.event.returnValue=false
+        };
+    </script>
+    <head>
+        <mate charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" >
+    
 <title>私人碎片展览馆-OC区大厅</title>
 </head>
 <body>
