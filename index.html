@@ -1,131 +1,408 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .message {
+          position: fixed;
+          width: 80%;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translateX(-50%) translateY(-50%);
+                  transform: translateX(-50%) translateY(-50%);
+          font-size: 1.2rem;
+          font-family: 'Baloo Bhaina', cursive;
+          color: #706C61;
+      }</style>
+      </head>
+      <body>
+  
+  <script src="click/mo.min.js"></script>
+  <script src="click/mojs-player.min.js"></script>
+  
+  <script>
+  'use strict';
+  
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
+  window.CP.exitedLoop(1);
+   }
+  window.CP.exitedLoop(2);
+   return target; };
+  
+  var OPTS = {
+      fill: 'none',
+      radius: 25,
+      strokeWidth: { 50: 0 },
+      scale: { 0: 1 },
+      angle: { 'rand(-35, -70)': 0 },
+      duration: 500,
+      left: 0,
+      top: 0,
+      easing: 'cubic.out'
+  };
+  
+  var circle1 = new mojs.Shape(_extends({}, OPTS, {
+      stroke: '#6495ED'
+  }));
+  
+  var circle2 = new mojs.Shape(_extends({}, OPTS, {
+      radius: { 0: 15 },
+      strokeWidth: { 30: 0 },
+      stroke: '#7B68EE',
+      delay: 'rand(75, 150)'
+  }));
+  
+  document.addEventListener('click', function (e) {
+      circle1.tune({ x: e.pageX, y: e.pageY }).replay();
+  
+      circle2.tune({ x: e.pageX, y: e.pageY }).replay();
+  });</script>
+  </body>
+  <body oncontextmenu=self.event.returnValue=false onselectstart="return false"><!--←禁止左右键-->
+  <script>
+    //按键触发
+  document.onkeydown = function(){
+      //禁止ctrl+u↓
+      if (event.ctrlKey && window.event.keyCode==85){
+      return false;
+      }
+      //禁止 F12↓
+      if (window.event && window.event.keyCode == 123) {
+      event.keyCode = 0;
+      event.returnValue = false;
+      }
+    //禁止ctrl+s↓
+      if (event.ctrlKey && window.event.keyCode==83){
+      return false;
+      }
+    //禁止 F5 ↓
+      if (window.event && window.event.keyCode == 116) {
+      event.keyCode = 0;
+      event.returnValue = false;}
+      };
+  </script>
+  
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<style>
-body {
-    background: #F0FFFF;background-image:url(https://aelier.github.io/rOmantiC/1.png);background-attachment: fixed;background-repeat: no-repeat;
-}
+    <title>私人碎片展览馆</title>
 
-.message {
-    position: fixed;
-    width: 80%;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-    font-size: 1.2rem;
-    font-family: 'Baloo Bhaina', cursive;
-    color: #706C61;
-}</style>
-</head>
-<body>
+    <!-- Bootstrap core CSS -->
 
-<script src="click/mo.min.js"></script>
-<script src="click/mojs-player.min.js"></script>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
 
-<script>
-'use strict';
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>一个鸽子的博物馆</h4>
+              <span>Gu Gu Gu!!</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1"><span title="首页">展馆大厅</span></a></li>
+                <li><a href="#section2"><span title="我家的宝贝们是世界的珍宝！">OC展览馆</span></a></li>
+                <li><a href="#section3"><span title="碎碎念和杂物堆积处">杂物间</span></a></li>
+                <li><a href="#section4"><span title="……一般也没人会联系我吧，我先摸为敬（爽朗">联系方式</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
-window.CP.exitedLoop(1);
- }
-window.CP.exitedLoop(2);
- return target; };
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2><span title="出自《太阳王》的《Je Fais De Toi, Mon Essentiel》。真的很好听，我哭我哭">Je sais ton amour<br>Je sais l'eau versée sur mon corps.</span></h2>
+            <div class="line-dec"></div>
+            <br>
+            <p
+              >
+              你好！我是首页版头！这里是一个小小的个人空间！主要用于存放碎碎念和OC相关——<br>
+              目前正在缓慢建设中，因为是学牲还是咕咕所以<del>进度你们也是知道的.jpg</del><br>
+              欢迎来找我玩^ ^)9❤<br>
+              <br>
+              <div class="line-dec"></div>
+              <br>
+              <p style="text-align:right ">【施工记录】<br>
+              20220402:首页重施工，<del>变得更高级了</del><br>
+              20220221:更新主世界世界观<br>
+              </p
+            >
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/left-image.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>~碎碎念环节~</h4>
+                  <p>
+                    改了五百年，重制版首页上线！<br>
+                    背景改成了我滴宝贝兔兔~真是让我的界面漂亮不少（点头<br>
+                    彩蛋依旧是电脑限定，后期可能<del>为了迫害</del>增加手机也可以看到的彩蛋。<br>
+                    还有很多没有明白的地方，施工之路任重道远（远目）（背手离开）<br>
+                    ^ ^暂时就是这样!<span title="希望还有下次见面">期待和你的下次见面~</span><br>
+                    <p style="text-align: right;"><del>这狗日的书我一天也不想读辣！</del></p>
+                  </p>
+                  <div class="white-button">
+                    <span title="鸽子施工队正在紧锣密鼓建设中……！"><a href="#section3">查阅更多</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-var OPTS = {
-    fill: 'none',
-    radius: 25,
-    strokeWidth: { 50: 0 },
-    scale: { 0: 1 },
-    angle: { 'rand(-35, -70)': 0 },
-    duration: 500,
-    left: 0,
-    top: 0,
-    easing: 'cubic.out'
-};
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>OC相关</h2>
+            <div class="line-dec"></div>
+            <span
+              >搭建网站的本意就是让我<del>就是图一乐呵</del>朋友们更好了解我的宝贝，<br>
+              所以来都来了！不得拖着你看看我家的宝贝们吗~~</span
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>壹</h4>
+                <p>
+                  也许是耳朵，也许是尾巴，也许是头部或者下肢……
+                  总之，现在世界上没有不含兽类特征的“怪物”。
+                </p>
+                <div class="white-button">
+                  <span title="世界的运行……很奇妙吧？"><a href="https://aelier.github.io/rOmantiC/OC_WORLD/OC_MainWorld_view">窥探世界</a></span>
+                  <span title="我宣誓，我自愿成为福瑞控！……你是已经有想寻找的对象了吗？"><a>寻找人物</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>贰</h4>
+                <p>
+                  神离开了世界，我们失去了<span title="？？？：好死！开香槟咯！">“父亲”</span>。
+                </p>
+                <div class="white-button">
+                  <span title="鸽子施工队正在紧锣密鼓建设中……！"><a>窥探世界</a></span>
+                  <span title="你对他们感兴趣吗？不是一个好选择，毕竟我还没做完呢^ ^)9❤"><a></a></span>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>叁</h4>
+                <p>
+                  ……<a title="出自《马戏之王》-《Rewrite The Stars》" >What if we rewrite the stars?</a>
+                </p>
+                <div class="white-button">
+                  <span title="大家都幸福快乐的世界！鸽子施工队正在紧锣密鼓建设中……！"><a>改写命运</a></span>
+                  <span title="以后再来重新认识一下他们吧？毕竟我也还没做完呢^ ^)9❤"><a>再遇</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>NOW LOADING...</h4>
+                <p>
+                  未来也许这里会有更多信息……
+                  <div class="white-button">
+                    <span title="鸽子施工队正在悠闲地gugugu中……！"><a>施工中……</a></span>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-var circle1 = new mojs.Shape(_extends({}, OPTS, {
-    stroke: '#6495ED'
-}));
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>碎碎念&杂事</h2>
+            <div class="line-dec"></div>
+            <span
+              >什么都先往这里放一放先！<br>
+              因为这个部分<del>特效</del>很酷！
+              </span
+            >
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span title="我去，更新了！">最近更新</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="suisuinian"
+                    name="isotope-filter"
+                  />
+                  <span title="暴论可能，我的网站我做主，指手画脚m……">碎碎念</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="zawujian"
+                    name="isotope-filter"
+                  />
+                  <span title="一般都是OC相关喔❤">阅览室</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="weifenlei"
+                    name="isotope-filter"
+                  />
+                  <span title="我也不知道怎么分类捏">？？？</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="zawujian">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-01.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-01.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>世界观</h4>
+                      <span>更新主世界世界观。</span>
+                    </figcaption>
+                  </figure>
+                </div>
 
-var circle2 = new mojs.Shape(_extends({}, OPTS, {
-    radius: { 0: 15 },
-    strokeWidth: { 30: 0 },
-    stroke: '#7B68EE',
-    delay: 'rand(75, 150)'
-}));
+                <div class="isotope-item" data-type="suisuinian">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-02.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-02.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>碎碎念</h4>
+                      <span>主页还在做但是我先放个碎碎念在这里</span>
+                    </figcaption>
+                  </figure>
+                </div>
 
-document.addEventListener('click', function (e) {
-    circle1.tune({ x: e.pageX, y: e.pageY }).replay();
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    circle2.tune({ x: e.pageX, y: e.pageY }).replay();
-});</script>
-</body>
-<body oncontextmenu=self.event.returnValue=false onselectstart="return false"><!--←禁止左右键-->
-<script>
-	//按键触发
-document.onkeydown = function(){
-    //禁止ctrl+u↓
-    if (event.ctrlKey && window.event.keyCode==85){
-    return false;
-    }
-    //禁止 F12↓
-    if (window.event && window.event.keyCode == 123) {
-    event.keyCode = 0;
-    event.returnValue = false;
-    }
-	//禁止ctrl+s↓
-    if (event.ctrlKey && window.event.keyCode==83){
-    return false;
-    }
-	//禁止 F5 ↓
-    if (window.event && window.event.keyCode == 116) {
-    event.keyCode = 0;
-    event.returnValue = false;}
-    };
-</script>
-<head>
-    <mate charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" >
-<title>私人碎片展览馆</title>
-</head>
-<hr>
-<br>
-<br>
-<h1 style="font-family:verdana;color:rgb(69, 65, 121);text-shadow: 2px 1px 2px rgb(48, 135, 161);"><i><abbr title="出自《太阳王》的《Je Fais De Toi, Mon Essentiel》。真的很好听，我哭我哭">Je sais ton amour<br>Je sais l'eau versée sur mon corps.</abbr></i></h1>
-<br>
-<p>你好！我是版头！这里是一个个人小空间！主要用于存放碎碎念和OC相关——</p>
-<p>目前正在缓慢搭载中，因为是学牲还是咕咕所以<b style="font-family:verdana;color:rgb(127, 137, 160)">进度你们也是知道的.jpg</b></p>
-<p>总之很高兴见到你啦！</p>
-<br>
-<hr>
-<br>
-<p style="color: rgb(87, 75, 189);">没有想到我又延迟开学了！我胡汉三又回来了.jpg</div></p>
-<p>这里是突如其来的碎碎念！一时兴起开始搭建网站，不知道什么时候能做好，不过html比想象中的好上手呢！
-  <br>虽然目前还是做的丑丑的，不过成就感hin强！希望返校前能做出一个宝贝的介绍页面，应该可以……吧（……）
-  <br>背景是我家的宝贝猫猫芬妮亲~真是让我的界面漂亮不少（点头
-  <br><b>欸！我偷偷适配手机了！但是彩蛋还是电脑限定！</b><del>不过网站不太适配手机呢……看起来可能会怪怪的，所以就给使用电脑浏览的朋友留下了一些彩蛋啦！</del>
-  <br>^ ^暂时就是这样!期待和你的下次见面~</p>
-  <br>
-<p style="text-align: end;">2022/2/18 打鸡血的凌晨</p>
-<br>
-<hr>
-<hr>
-<h3 style="font-family:verdana;color:rgb(76, 93, 129);text-shadow: 1px 1px 1px rgb(48, 135, 161);">↓来都来了，OC和碎碎念是这里的特色，不得不品尝啊！↓</h3>
-<ul>
-  <li> <b><abbr title="都是我的大宝贝"><a href="https://aelier.github.io/rOmantiC/OC.html">我家OC</a></abbr>【施工中……】</b></li>
-</ul>
-<ul>
-    <li><b>一些<abbr title="后期可能会细分">碎碎念</abbr>【施工中……】</b></li>
-  </ul>
-  <br>
-  <br>
-<hr>
-<br>
-<br>
-<p style="text-align:right "><del><small style="font-family:verdana;color:rgb(117, 72, 117)">呃，虽然不太可能，但是万一有人想联系我呢？（擦汗</small></del></p>
-<p style="text-align:right ">有事请直接戳企鹅：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2541975393&website=www.oicqzone.com">2541975393</a> </p>
-<p style="text-align:right ">邮箱也不是不方便：<a href="mailto:weboth@foxmail.com">weboth@foxmail.com</a></p>
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2><span title="我超，不会有知道这个网站的人没有我联系方式这种鬼事吧">联系方式？</span></h2>
+            <p>有事请直接戳企鹅：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2541975393&website=www.oicqzone.com">2541975393</a> </p>
+            <p>邮箱也是可以的哦：<a href="mailto:weboth@foxmail.com">weboth@foxmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
