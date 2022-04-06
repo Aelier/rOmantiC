@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<!-- Mobile meta for responsive view -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- 
+			Normalize.css makes browsers render all elements
+			more consistently and in line with modern standards 
+		-->
+		<link rel="stylesheet" href="static/css/normalize.css">
+		
+		<!-- Styles of Puerto Responsive Mega menu -->
+		<link rel="stylesheet" href="static/css/mains.css">
+		
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="static/css/font-awesome.min.css">
+		
+	
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+	<link rel="stylesheet" href="css/style.css">
+	
+		<style>
+		  .message {
+			  position: fixed;
+			  width: 80%;
+			  text-align: center;
+			  top: 50%;
+			  left: 50%;
+			  -webkit-transform: translateX(-50%) translateY(-50%);
+					  transform: translateX(-50%) translateY(-50%);
+			  font-size: 1.2rem;
+			  font-family: 'Baloo Bhaina', cursive;
+			  color: #706C61;
+		  }</style>
+		  </head>
+		  <body>
+	  
+	  
+	<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./css/bs4.pop.css">
+	<script src="click/mo.min.js"></script>
+	<script src="click/mojs-player.min.js"></script>
+	
+	
+	  <script>
+	  'use strict';
+	  
+	  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) {if (window.CP.shouldStopExecution(2)){break;} var source = arguments[i]; for (var key in source) {if (window.CP.shouldStopExecution(1)){break;} if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } }
+	  window.CP.exitedLoop(1);
+	   }
+	  window.CP.exitedLoop(2);
+	   return target; };
+	  
+	  var OPTS = {
+		  fill: 'none',
+		  radius: 25,
+		  strokeWidth: { 50: 0 },
+		  scale: { 0: 1 },
+		  angle: { 'rand(-35, -70)': 0 },
+		  duration: 500,
+		  left: 0,
+		  top: 0,
+		  easing: 'cubic.out'
+	  };
+	  
+	  var circle1 = new mojs.Shape(_extends({}, OPTS, {
+		  stroke: '#6495ED'
+	  }));
+	  
+	  var circle2 = new mojs.Shape(_extends({}, OPTS, {
+		  radius: { 0: 15 },
+		  strokeWidth: { 30: 0 },
+		  stroke: '#7B68EE',
+		  delay: 'rand(75, 150)'
+	  }));
+	  
+	  document.addEventListener('click', function (e) {
+		  circle1.tune({ x: e.pageX, y: e.pageY }).replay();
+	  
+		  circle2.tune({ x: e.pageX, y: e.pageY }).replay();
+	  });</script>
+	  </body>
+	  <body oncontextmenu=self.event.returnValue=false onselectstart="return false"><!--←禁止左右键-->
+	  <script>
+		//按键触发
+	  document.onkeydown = function(){
+		  //禁止ctrl+u↓
+		  if (event.ctrlKey && window.event.keyCode==85){
+		  return false;
+		  }
+		  //禁止 F12↓
+		  if (window.event && window.event.keyCode == 123) {
+		  event.keyCode = 0;
+		  event.returnValue = false;
+		  }
+		//禁止ctrl+s↓
+		  if (event.ctrlKey && window.event.keyCode==83){
+		  return false;
+		  }
+		//禁止 F5 ↓
+		  if (window.event && window.event.keyCode == 116) {
+		  event.keyCode = 0;
+		  event.returnValue = false;}
+		  };
+	  </script>
+	  
+		<meta charset="utf-8" />
+		<meta
+		  name="viewport"
+		  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+	
+	<title>私人碎片博物馆-OC区-安莎【已知情报】</title>
+</head>
+<body>
+	
+	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<!--弹窗样式-->
+	<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+	<script src="./js/bs4.pop.js"></script>
+  
+<!--弹窗-->
+	<script>
+
+		setTimeout(() => {
+			$('#alert').alert();
+
+			setTimeout(() => {
+				$('#alert').alert('close');
+			}, 2000);
+		}, 2000);
+		
+	</script>
+
+	<!--目录-->
+	<div style="float:left;">
+  
+	  <nav>
+		<ul class="puerto-dark-bar color-8">
+		  <li class="drop-menu">
+			<a href="javascript:void(0)">
+			  <i class="fa fa-home"></i>
+			  <strong>返回</strong>
+			</a>
+			<ul>
+			  <li><a href="https://aelier.github.io/rOmantiC/"><i class="fa fa-globe"></i>回到首页</a></li>
+			  <li><a href="https://aelier.github.io/rOmantiC/OC_WORLD/OC_MainWorld/ALL"><i class="fa fa-group"></i>人物一览</a></li>
+			</ul>
+		  </li>
+		  <li class="active">
+			<a href="javascript:void(0)">
+			  <i class="fa fa-edit"></i>
+			  <strong><span onclick="bs4pop.notice('你已经在这里啦！', {position: 'topcenter'})">角色信息</strong></span>
+			</a>
+		  </li>
+		  <li class="drop-menu">
+			<a href="javascript:void(0)">
+			  <i class="fa fa-gift"></i>
+			  <strong>小小惊喜</strong>
+			</a>
+			<ul>
+			  <li><a href="javascript:void(0)"><span onclick="bs4pop.notice('偶尔会出现的小惊喜？总之现在还没出现呢！耐心等待吧^ ^)9', {position: 'topcenter'})"><i class="fa fa-certificate"></i>【暂未开放】</a></span></li>
+			  <li><a href="javascript:void(0)"onclick="bs4pop.prompt('难道您已经从某些地方获得了查看一些文件的许可？<br>……如果是这样的话，烦请出示。', '', function(sure, value){ console.log('', value);})"><i class="fa fa-envelope-o"></i>封存信件</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </nav>
+	  
+	</div>
+  
+  <!--正文-->
+	<div class="cont s--inactive">
+	  <!-- cont inner start -->
+	  <div class="cont__inner">
+		<!-- el start -->
+		<div class="el">
+		  <div class="el__overflow">
+			<div class="el__inner">
+			  <div class="el__bg"></div>
+			  <div class="el__preview-cont">
+				<h2 class="el__heading">基本信息</h2>
+			  </div>
+			  <div class="el__content">
+				<div class="el__text">信息</div>
+				<div class="el__text_2">
+					<br>
+				    姓名：<ruby>安莎<rt>Answear</rt></ruby><br>
+					性别：Female♀<br>
+					职业：学生<br>
+					<hr style="color: darkgray;">
+					一天到晚都会想睡觉的小猫咪，有能让周围的人甚至机械都也奇妙地陷入困倦之中的能力，可谓失眠者的<ruby>福音<rt>Angle</rt></ruby>。<br>
+                    ……本应如此，但是据周围陷入睡眠的人说，似乎总会做一些不好的梦。<br>
+					感觉太过于真实，以至于人们往往醒来后也心有余悸。<br>
+					安莎也在努力避免使周围的人陷入睡眠之中,但是往往是她先睡着。<br>
+					明明每天都睡十二个小时以上，却还是无法抵御袭来的睡意，为此她也十分苦恼。<br>
+					但是除此以外就是一个普通的女孩子。在和最近交到的朋友们一起努力中，一定会成功的……吧？
+				</div>
+				<div class="el__close-btn"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="el__index">
+			<div class="el__index-back">1</div>
+			<div class="el__index-front">
+			  <div class="el__index-overlay" data-index="1">1</div>
+			</div>
+		  </div>
+		</div>
+		<!-- el end -->
+		<!-- el start -->
+		<div class="el">
+		  <div class="el__overflow">
+			<div class="el__inner">
+			  <div class="el__bg"></div>
+			  <div class="el__preview-cont">
+				<h2 class="el__heading">公开情报</h2>
+			  </div>
+			  <div class="el__content">
+				<div class="el__text">情报</div>
+				<div class="el__text_2">
+					<br>
+					“…………很难说她的这种能力是不是和遗传有关，安莎父母家的传统能力皆以直接增幅战斗力为主，安莎的<ruby>能力<rt>睡眠</rt></ruby>比起来确实在战斗方面太弱了。<br>
+					对于有意志力坚强的人，她可能在让别人睡着之前自己就已经……抱歉，已经是和平时期了，我不该这么说的。<br>
+					不过让人“做噩梦”未必也不是她能力的一环？……很难说，她还太小了，自己的能力都没法控制，我又怎么好评价呢。<br>
+					至少不用担心她因为这种“目前看来派不上用场”的能力失去生命……我由衷……感到高兴。”
+					<p style="text-align: right;">——？？？</p>
+				</div>
+				<div class="el__close-btn"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="el__index">
+			<div class="el__index-back">2</div>
+			<div class="el__index-front">
+			  <div class="el__index-overlay" data-index="2">2</div>
+			</div>
+		  </div>
+		</div>
+		<!-- el end -->
+		<!-- el start -->
+		<div class="el">
+		  <div class="el__overflow">
+			<div class="el__inner">
+			  <div class="el__bg"></div>
+			  <div class="el__preview-cont">
+				<h2 class="el__heading">人物故事</h2>
+			  </div>
+			  <div class="el__content">
+				<div class="el__text">故事</div>
+				<div class="el__text_2">
+					在做了.JPG
+				</div>
+				<div class="el__close-btn"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="el__index">
+			<div class="el__index-back">3</div>
+			<div class="el__index-front">
+			  <div class="el__index-overlay" data-index="3">3</div>
+			</div>
+		  </div>
+		</div>
+		<!-- el end -->
+		<!-- el start -->
+		<div class="el">
+		  <div class="el__overflow">
+			<div class="el__inner">
+			  <div class="el__bg"></div>
+			  <div class="el__preview-cont">
+				<h2 class="el__heading">社会关系</h2>
+			  </div>
+			  <div class="el__content">
+				<div class="el__text">关系网</div>
+				<div class="el__text_2">
+					在做了.JPG
+				</div>
+				<div class="el__close-btn"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="el__index">
+			<div class="el__index-back">4</div>
+			<div class="el__index-front">
+			  <div class="el__index-overlay" data-index="4">4</div>
+			</div>
+		  </div>
+		</div>
+		<!-- el end -->
+		<!-- el start -->
+		<div class="el">
+		  <div class="el__overflow">
+			<div class="el__inner">
+			  <div class="el__bg"></div>
+			  <div class="el__preview-cont">
+				<h2 class="el__heading">Coming Soon</h2>
+			  </div>
+			  <div class="el__content">
+				<div class="el__text">未来我们会知道更多故事。</div>
+				<div class="el__close-btn">
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="el__index">
+			<div class="el__index-back">5</div>
+			<div class="el__index-front">
+			  <div class="el__index-overlay" data-index="5">?</div>
+			</div>
+		  </div>
+		</div>
+		<!-- el end -->
+	  </div>
+	  <!-- cont inner end -->
+	</div>
+  
+  <script src="js/index.js"></script>
+  
+  </body>
+  </html>
+  
+</body>
+</html>
